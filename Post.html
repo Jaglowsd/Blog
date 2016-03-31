@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<!-- Give the page the title of the blog -->
+		<title id="blogTitle"></title>
+		<!-- Load the main bootstrap style sheet -->
+		<link href="bootstrap.css" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="bootstrap.js"></script>
+        <style type="text/css">
+			body { 
+				padding: 75px 0 0 0;
+			}
+			a.anchor {
+				display: block;
+				position: relative;
+				top: -250px;
+				visibility: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Give navbar the title of the blog -->
+					<a class="navbar-brand" id="navTitle" href="Home.html">Blog.com</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="Login.html">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<a class="anchor" id="top"></a>
+		<div class="container">
+			<div class="col-md-7" >
+				<div id="postDiv">
+					<!-- Posts go here. Some sample posts below. -->
+				</div>
+				<hr>
+				<a class="anchor" id="#comments"></a>
+				<div id="commentDiv">
+					<!-- This should have the number of comments -->
+					<h4 id="commentCount"></h4>
+					<!-- Some sample comments -->
+				</div>
+				<div>
+					<div class="form-group">
+						<textarea class="form-control" rows="3" id="comment" placeholder="Leave a Comment"></textarea>
+					</div>
+					<button class="btn btn-primary" id="createComment">Add Comment</button>
+				</div>
+				<hr>
+			</div>
+			
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="Post.js"></script>
+	</body>
+</html>

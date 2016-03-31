@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Load the main bootstrap style sheet -->
+		<link href="bootstrap.css" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="bootstrap.js"></script>
+		<style type="text/css">
+			.btn-xl {
+				padding: 20px 30px;
+				font-size: 30px;
+				line-height: 1.66;
+				border-radius: 8px
+			}
+			body { 
+				padding: 200px 0 0 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Give navbar the title of the blog -->
+                    <a class="navbar-brand" class="blogTitle" href="Login.html">Anonymous.com</a>
+                </div>
+            </div>
+        </div>
+		<div class="modal fade" id="cbModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Create Your Blog</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+							<fieldset>
+								<div class="form-group">
+									<label for="title" class="col-lg-2 control-label">Title</label>
+									<div class="col-lg-10">
+										<input type="text" id="title" class="form-control" placeholder="Title">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="bio" class="bio col-lg-2 control-label">Bio</label>
+									<div class="col-lg-10">
+										<textarea class="form-control" rows="4" id="bio"></textarea>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button id="createBlog" type="button" class="btn btn-primary">Create Blog</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="col-sm-1 col-sm-offset-5">
+			<button type="button" class="btn btn-info btn-xl" data-toggle="modal" data-target="#cbModal">Create Your Blog</button>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="CreateBlog.js"></script>
+	</body>
+
+</html>

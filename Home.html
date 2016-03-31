@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<!-- Give the page the title of the blog -->
+		<title id="blogTitle"></title>
+		<!-- Load the main bootstrap style sheet -->
+		<link href="bootstrap.css" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="bootstrap.js"></script>
+		<style type="text/css">
+			body { 
+				padding: 75px 0 0 0;
+			}
+		</style>
+	</head>
+	<body>
+        <div class="modal fade" id="npModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Create a New Post</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+							<fieldset>
+								<div class="form-group">
+									<label for="title" class="col-lg-2 control-label">Topic</label>
+									<div class="col-lg-10">
+										<input type="text" id="topicTitle" class="form-control" placeholder="Topic">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-lg-10 col-lg-offset-2">
+										<textarea class="form-control" rows="16" id="content"></textarea>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button id="createPost" type="button" class="btn btn-primary">Create Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Give navbar the title of the blog -->
+					<a class="navbar-brand" id="navTitle" href=""></a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="Login.html">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="col-md-7" id="postDiv">
+				<!-- Posts go here. -->
+				
+			</div>
+			<div class="col-md-3 col-md-offset-2">
+				<div>
+					<button class="btn btn-info btn-block" data-toggle="modal" data-target="#npModal" id="newPost">New Post</button>
+				</div>
+				<br>
+				<div class="well">
+					<h4 class="text-info">About</h4>
+					<!-- Fill in bio information here -->
+					<p id="about">
+					</p>
+				</div>
+				<br>
+				<div id="newestBlogs">
+					<h5>Newest Blogs</h5>
+					<hr>
+					<!-- Put blog titles here 
+					<h6><a href="">Coffee</a></h6>
+					<hr>
+					<h6><a href="">Cool Stuff</a></h6>
+					<hr> -->
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="Home.js"></script>
+	</body>
+</html>
